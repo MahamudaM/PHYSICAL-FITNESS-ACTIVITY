@@ -1,0 +1,22 @@
+
+.main-container{
+    display: flex;
+    
+}
+.body-left{
+    width: 70%;
+    padding: 70px;
+}
+.ExerciseDetails{
+    width: 30%;
+}
+
+.carts{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:10px;
+   
+}
+
+
+

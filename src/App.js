@@ -1,10 +1,12 @@
 
 import './App.css';
+import Main from './component/MainBody/Main';
 
 function App() {
   return (
-    <div className="App">
-     <h1>This is my astra work website</h1>
+    <div >
+     
+     <Main></Main>
     </div>
   );
 }
