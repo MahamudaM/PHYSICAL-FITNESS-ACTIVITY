@@ -4,13 +4,15 @@ const CartData=(props)=>{
     return(
        <div className="single-cart">
          <img src={picture} alt="" />
-         <div>
-            <h3>{name}</h3>
+         <div className='cartInfo'>
+            <h3 className='cartHading'>{name}</h3>
             <p>{about}</p>
+            <div className='ageAndTime'>
             <p>age : {age}</p>
             <p>time :{time}</p>
+            </div>
          </div>
-         <button>Add to list</button>
+         <button className='cartBtn'>Add to list</button>
        </div>
     )
 }

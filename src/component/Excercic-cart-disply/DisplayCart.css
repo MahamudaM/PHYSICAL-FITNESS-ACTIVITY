@@ -1,4 +1,30 @@
 .single-cart{
     border: 1px solid red;
+    border-radius: 5px;
     padding: 14px;
+    position: relative;
+}
+.single-cart img{
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+}
+
+.ageAndTime{
+   line-height:0;
+}
+.cartBtn{
+     background:rgb(206, 136, 6) ;
+    border: none;
+    border-radius: 8px;
+width: 90%;
+padding: 10px;
+position:absolute;
+bottom: 5px;
+right: 14px;
+color: aliceblue;
+text-transform: capitalize;
+}
+.cartBtn:hover{
+    background: orange;
 }
