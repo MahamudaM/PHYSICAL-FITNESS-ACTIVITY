@@ -1,6 +1,7 @@
 import './DisplayCart.css'
 const CartData=(props)=>{
-    const{picture,name,time,age,about}=props.infoDetail
+   const{infoDetail,evenHandler}=props
+    const{picture,name,time,age,about}= infoDetail
     return(
        <div className="single-cart">
          <img src={picture} alt="" />
@@ -9,10 +10,10 @@ const CartData=(props)=>{
             <p>{about}</p>
             <div className='ageAndTime'>
             <p>For Age : {age}</p>
-            <p>Time required :{time}</p>
+            <p>Time required :{time}s</p>
             </div>
          </div>
-         <button className='cartBtn'>Add to list</button>
+         <button className='cartBtn' onClick={()=>evenHandler}>Add to list</button>
        </div>
     )
 }

@@ -1,0 +1,56 @@
+.aboutMyself{
+    display: flex;
+    padding: 20px;
+    border: 1px solid red;
+}
+.aboutMyself img{
+width: 20%;
+height: 20%;
+border-radius: 50%;
+}
+.myselfInfo{
+    line-height: 0;
+margin-left: 15px;
+}
+.phisicalInfo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:5px;
+    background:pink;
+    padding:0 20px;
+    
+    border-radius: 5px;
+    line-height: 5px;
+}
+
+.boltNumber{
+    font-weight: 500;  
+}
+.textDeep{
+ color: rgb(63, 62, 62);
+}
+.breakBtnContainer{
+background: gray;
+padding: 20px;
+border-radius: 5%;
+}
+
+.breakBtn{
+    background: rgb(186, 123, 5);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.breakBtn:hover{
+    background: orange;
+}
+.ExcerciseTimeBtn{
+    padding: 16px;
+    width: 86%;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
