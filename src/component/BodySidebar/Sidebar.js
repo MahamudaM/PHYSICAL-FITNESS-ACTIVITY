@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Sidebar.css'
 import logo from '../../my.jpg'
 // toset import data
 
-import {  toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addTimeLocalStorag, getStorTime } from '../../Utilities/LoadTimeLocalStorg';
 
 
 const Sidebar = (props) => {
@@ -21,12 +22,28 @@ const breakTime= [10,20,30,40,50]
 const breakTimeClick = (time)=>{
    const breakTim =time;
 setBreakTimeValue(breakTim)
+addTimeLocalStorag(time)
 }
 
+// get time from local storage
+// useEffect(()=>{
+//     const storeTimes = getStorTime()
+//     const saveTime=[]
+//     for(const time in storeTimes)
+//     console.log(breakTimeValue)
+//     const adedTimes = breakTimeValue.find(times=>times===time);
+//     if(adedTimes){
+//         saveTime.push(adedTimes)
+//     }
+   
+// },[breakTimeValue])
  // toast notification
     
- const notify = () => {
-    toast("Wow so easy");
+ const notify =()=>  {
+    toast("Congratulation ! You submit assingment on time",{
+        position:'top-center',
+        
+    });
  }
 
 
@@ -58,16 +75,18 @@ setBreakTimeValue(breakTim)
 <p>Add A Break</p>
 <div className='breakBtnContainer'>
 {
-    breakTime.map(time=><button className='breakBtn' onClick={()=>breakTimeClick(time)} key={time.toString()}>{time}s</button>)
+    breakTime.map(time=><button className='breakBtn' onClick={()=>breakTimeClick(time)} key={time.toString()}
+    >{time}s</button>)
 }
 
 </div>
 
 <p>Exercise Details</p>
-<div>
+<div className='btnGroup'>
     <p className='totalTimeCountBtn'>Exercise time <span className='timeCountBtnSpan'>{initalTime}s</span> </p><br />
     <p className='totalTimeCountBtn'>Break time <span className='timeCountBtnSpan'>{breakTimeValue}s</span></p><br />
-    <button className='ExcerciseTimeBtn' onClick={notify}>Activity Completed</button>
+    <button className='ExcerciseTimeBtn' onClick={()=>notify()}>Activity Completed </button>
+    <ToastContainer></ToastContainer>
 </div>
         </div>
     );

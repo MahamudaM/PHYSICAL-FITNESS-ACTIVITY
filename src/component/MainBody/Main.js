@@ -21,9 +21,7 @@ const[cart,setCart]=useState([])
         const addedCart = [...cart,infoDetail]
         setCart(addedCart)
     }
-   
-        
-    
+
     return (
         <div className='main-container'>
             <div className='body-left'>
@@ -33,7 +31,7 @@ const[cart,setCart]=useState([])
                 <FontAwesomeIcon icon={faDumbbell} className='icon'></FontAwesomeIcon>
                  <h1 className='excerciseHading'>physical-fitness-activity</h1>
                 </div>
-                    <h4>Select today’s activity</h4>
+                    <h3>Select today’s activity</h3>
                     <div className='carts'>
                     {
                      cartInfo.map(singleCartInfo=><CartData

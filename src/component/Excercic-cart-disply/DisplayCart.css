@@ -1,8 +1,9 @@
 .single-cart{
-    border: 1px solid red;
+    
     border-radius: 5px;
     padding: 14px;
     position: relative;
+    background:#262e46 ;
 }
 .single-cart img{
     width: 100%;
@@ -12,9 +13,10 @@
 
 .ageAndTime{
    line-height:0;
+  
 }
 .cartBtn{
-     background:rgb(206, 136, 6) ;
+     background:#FF6A3D ;
     border: none;
     border-radius: 8px;
 width: 90%;
@@ -26,7 +28,7 @@ color: aliceblue;
 text-transform: capitalize;
 }
 .cartBtn:hover{
-    background: orange;
+    background: #df3704;
 }
 
 

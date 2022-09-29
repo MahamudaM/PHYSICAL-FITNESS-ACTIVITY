@@ -21,27 +21,29 @@ margin-left: 15px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap:5px;
-    background:pink;
+    background:whitesmoke;
     padding:0 20px;
-    
     border-radius: 5px;
     line-height: 5px;
 }
-
+.phisicalInfo p {
+    color:#FF6A3D
+}
 .boltNumber{
-    font-weight: 500;  
+    font-weight: 500;
+    color: #f17f5d;  
 }
 .textDeep{
- color: rgb(63, 62, 62);
+ color: #f17f5d;
 }
 .breakBtnContainer{
-background: gray;
+background: whitesmoke;
 padding: 20px;
 border-radius: 5%;
 }
 
 .breakBtn{
-    background: rgb(186, 123, 5);
+    background: #FF6A3D ;
     color: white;
     border: none;
     padding: 10px;
@@ -50,7 +52,7 @@ border-radius: 5%;
 }
 
 .breakBtn:hover{
-    background: orange;
+    background: #df3704;
 }
 .totalTimeCountBtn{
     background: whitesmoke;
@@ -62,7 +64,7 @@ border-radius: 5%;
 }
 .timeCountBtnSpan{
 margin-left: 15px;
-color: rgb(62, 59, 59);
+color: #FF6A3D;
 }
 
 .ExcerciseTimeBtn{
@@ -71,4 +73,13 @@ color: rgb(62, 59, 59);
     border: none;
     border-radius: 10px;
     margin-bottom: 20px;
+    color: #FF6A3D;
 }
+
+.btnGroup{
+    color:#f17f5d
+}
+
+
+
+
