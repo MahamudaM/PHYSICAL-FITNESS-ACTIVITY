@@ -1,6 +1,7 @@
 
 import './App.css';
 import Main from './component/MainBody/Main';
+import ReactBlog from './component/ReactBlog/ReactBlog';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div >
      
      <Main></Main>
+     <ReactBlog></ReactBlog>
     </div>
   );
 }

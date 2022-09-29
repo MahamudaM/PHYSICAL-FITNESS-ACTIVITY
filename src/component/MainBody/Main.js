@@ -3,6 +3,8 @@ import { CartData } from '../Excercic-cart-disply/DisplayCart';
 import './Main.css'
 
 import Sidebar from '../BodySidebar/Sidebar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faDumbbell  } from '@fortawesome/free-solid-svg-icons';
 
 
 const Main = () => {
@@ -26,7 +28,11 @@ const[cart,setCart]=useState([])
         <div className='main-container'>
             <div className='body-left'>
                 <div className="header-titl">
-                    <h1 className='excerciseHading'>physical-fitness-activity</h1>
+                    
+                <div className='hiderIcon'>
+                <FontAwesomeIcon icon={faDumbbell} className='icon'></FontAwesomeIcon>
+                 <h1 className='excerciseHading'>physical-fitness-activity</h1>
+                </div>
                     <h4>Select today’s activity</h4>
                     <div className='carts'>
                     {

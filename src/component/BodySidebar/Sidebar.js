@@ -25,7 +25,9 @@ setBreakTimeValue(breakTim)
 
  // toast notification
     
- const notify = () => toast("Wow so easy!");
+ const notify = () => {
+    toast("Wow so easy");
+ }
 
 
     return (
@@ -56,7 +58,7 @@ setBreakTimeValue(breakTim)
 <p>Add A Break</p>
 <div className='breakBtnContainer'>
 {
-    breakTime.map(time=><button className='breakBtn' onClick={()=>breakTimeClick(time)}>{time}s</button>)
+    breakTime.map(time=><button className='breakBtn' onClick={()=>breakTimeClick(time)} key={time.toString()}>{time}s</button>)
 }
 
 </div>
