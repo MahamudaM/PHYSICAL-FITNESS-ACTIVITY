@@ -12,9 +12,7 @@
     color: rgb(210, 140, 10);
 }
 .ExerciseDetails{
-    position: sticky;
-    top:0;
-    right: 0;
+   
     width: 30%;
     margin-left: 20px;
     background: cadetblue;

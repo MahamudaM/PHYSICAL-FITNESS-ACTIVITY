@@ -1,16 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Sidebar.css'
 import logo from '../../my.jpg'
+// toset import data
+
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Sidebar = (props) => {
     let {cart}=props
+    
 let initalTime = 0;
 for(const times of cart){
    initalTime = initalTime + times.time;
 }
+// break time
+const [breakTimeValue,setBreakTimeValue]=useState([0])
+const breakTime= [10,20,30,40,50]
 
-console.log(cart)
+const breakTimeClick = (time)=>{
+   const breakTim =time;
+setBreakTimeValue(breakTim)
+}
+
+ // toast notification
+    
+ const notify = () => toast("Wow so easy!");
+
+
     return (
-        <div>
+        <div className='sidebarContainer'>
             
             <div className='aboutMyself'>
                         <img src={logo} alt="" />
@@ -36,21 +55,22 @@ console.log(cart)
 {/* botton section */}
 <p>Add A Break</p>
 <div className='breakBtnContainer'>
-<button className='breakBtn'>10s</button>
-<button className='breakBtn'>20s</button>
-<button className='breakBtn'>30s</button>
-<button className='breakBtn'>40s</button>
-<button className='breakBtn'>50s</button>
+{
+    breakTime.map(time=><button className='breakBtn' onClick={()=>breakTimeClick(time)}>{time}s</button>)
+}
+
 </div>
 
 <p>Exercise Details</p>
 <div>
-    <p className='totalTimeCountBtn'>Exercise time <span className='timeCountBtnSpan'>{initalTime}</span> </p><br />
-    <p className='totalTimeCountBtn'>Break time <span className='timeCountBtnSpan'>{}</span></p><br />
-    <button className='ExcerciseTimeBtn'>Activity Completed</button>
+    <p className='totalTimeCountBtn'>Exercise time <span className='timeCountBtnSpan'>{initalTime}s</span> </p><br />
+    <p className='totalTimeCountBtn'>Break time <span className='timeCountBtnSpan'>{breakTimeValue}s</span></p><br />
+    <button className='ExcerciseTimeBtn' onClick={notify}>Activity Completed</button>
 </div>
         </div>
     );
 };
+
+
 
 export default Sidebar;

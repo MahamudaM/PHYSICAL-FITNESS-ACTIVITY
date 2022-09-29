@@ -3,6 +3,8 @@ import { CartData } from '../Excercic-cart-disply/DisplayCart';
 import './Main.css'
 
 import Sidebar from '../BodySidebar/Sidebar';
+
+
 const Main = () => {
 
 const [cartInfo,setCartInfo]=useState([])
@@ -17,6 +19,9 @@ const[cart,setCart]=useState([])
         const addedCart = [...cart,infoDetail]
         setCart(addedCart)
     }
+   
+        
+    
     return (
         <div className='main-container'>
             <div className='body-left'>
@@ -37,8 +42,11 @@ const[cart,setCart]=useState([])
             </div>
             <div className='ExerciseDetails'>
               <Sidebar
-              cart={cart}></Sidebar>
+              cart={cart}
+              ></Sidebar>
             </div>
+{/* toast */}
+
         </div>
     );
 };

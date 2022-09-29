@@ -1,7 +1,12 @@
+.sidebarContainer{
+    position: sticky;
+    top:0;
+}
+
 .aboutMyself{
     display: flex;
-    padding: 20px;
-    
+    padding: 20px 0;
+   
 }
 .aboutMyself img{
 width: 20%;
