@@ -4,8 +4,12 @@
     
 }
 .body-left{
-    width: 70%;
-    padding: 70px;
+    width: 80%;
+    padding: 20px;
+}
+.excerciseHading{
+    text-transform: uppercase;
+    color: rgb(210, 140, 10);
 }
 .ExerciseDetails{
     width: 30%;
@@ -14,9 +18,48 @@
 .carts{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap:10px;
+    grid-gap:15px;
    
 }
+
+.aboutMyself{
+    display: flex;
+    padding: 20px;
+    border: 1px solid red;
+}
+.aboutMyself img{
+width: 20%;
+height: 20%;
+border-radius: 50%;
+}
+.myselfInfo{
+    line-height: 0;
+margin-left: 15px;
+}
+.phisicalInfo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:5px;
+    background:pink;
+    padding:0 20px;
+    margin:0px 20px;
+    border-radius: 5px;
+    line-height: 5px;
+}
+
+.boltNumber{
+    font-weight: 500;  
+}
+.textDeep{
+ color: rgb(63, 62, 62);
+}
+
+
+
+
+
+
+
 
 
 

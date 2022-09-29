@@ -5,11 +5,11 @@ const CartData=(props)=>{
        <div className="single-cart">
          <img src={picture} alt="" />
          <div className='cartInfo'>
-            <h3 className='cartHading'>{name}</h3>
+            <h3 >{name}</h3>
             <p>{about}</p>
             <div className='ageAndTime'>
-            <p>age : {age}</p>
-            <p>time :{time}</p>
+            <p>For Age : {age}</p>
+            <p>Time required :{time}</p>
             </div>
          </div>
          <button className='cartBtn'>Add to list</button>
