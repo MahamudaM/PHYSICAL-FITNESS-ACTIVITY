@@ -13,7 +13,7 @@ const CartData=(props)=>{
             <p>Time required :{time}s</p>
             </div>
          </div>
-         <button className='cartBtn' onClick={()=>evenHandler}>Add to list</button>
+         <button className='cartBtn' onClick={()=>evenHandler(infoDetail)}>Add to list</button>
        </div>
     )
 }

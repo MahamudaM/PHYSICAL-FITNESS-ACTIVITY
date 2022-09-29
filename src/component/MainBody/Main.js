@@ -11,8 +11,8 @@ const [cartInfo,setCartInfo]=useState([])
         .then(res=>res.json())
         .then(data=>setCartInfo(data))
     },[])
-    const addTimeInExcercise =(cartInfo)=>{
-        console.log(cartInfo)
+    const addTimeInExcercise  =(infoDetail)=>{
+        console.log(infoDetail)
     }
     return (
         <div className='main-container'>
@@ -25,7 +25,7 @@ const [cartInfo,setCartInfo]=useState([])
                      cartInfo.map(singleCartInfo=><CartData
                          infoDetail = {singleCartInfo}
                          key = {singleCartInfo.id}
-                         evenHandler = {addTimeInExcercise(cartInfo)}
+                         evenHandler = {addTimeInExcercise}
                      ></CartData>)   
                     }
                     </div>
