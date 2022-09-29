@@ -1,8 +1,14 @@
 import React from 'react';
 import './Sidebar.css'
 import logo from '../../my.jpg'
-const Sidebar = () => {
-    
+const Sidebar = (props) => {
+    let {cart}=props
+let initalTime = 0;
+for(const times of cart){
+   initalTime = initalTime + times.time;
+}
+
+console.log(cart)
     return (
         <div>
             
@@ -39,8 +45,8 @@ const Sidebar = () => {
 
 <p>Exercise Details</p>
 <div>
-    <button className='ExcerciseTimeBtn'>Exercise time </button><br />
-    <button className='ExcerciseTimeBtn'>Break time</button><br />
+    <p className='totalTimeCountBtn'>Exercise time <span className='timeCountBtnSpan'>{initalTime}</span> </p><br />
+    <p className='totalTimeCountBtn'>Break time <span className='timeCountBtnSpan'>{}</span></p><br />
     <button className='ExcerciseTimeBtn'>Activity Completed</button>
 </div>
         </div>

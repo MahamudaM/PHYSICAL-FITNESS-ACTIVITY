@@ -1,7 +1,7 @@
 .aboutMyself{
     display: flex;
     padding: 20px;
-    border: 1px solid red;
+    
 }
 .aboutMyself img{
 width: 20%;
@@ -47,6 +47,19 @@ border-radius: 5%;
 .breakBtn:hover{
     background: orange;
 }
+.totalTimeCountBtn{
+    background: whitesmoke;
+    padding: 12px;
+    width: 78%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+   
+}
+.timeCountBtnSpan{
+margin-left: 15px;
+color: rgb(62, 59, 59);
+}
+
 .ExcerciseTimeBtn{
     padding: 16px;
     width: 86%;

@@ -6,13 +6,16 @@ import Sidebar from '../BodySidebar/Sidebar';
 const Main = () => {
 
 const [cartInfo,setCartInfo]=useState([])
+const[cart,setCart]=useState([])
     useEffect(()=>{
         fetch('cartInfo.json')
         .then(res=>res.json())
         .then(data=>setCartInfo(data))
     },[])
     const addTimeInExcercise  =(infoDetail)=>{
-        console.log(infoDetail)
+        
+        const addedCart = [...cart,infoDetail]
+        setCart(addedCart)
     }
     return (
         <div className='main-container'>
@@ -33,7 +36,8 @@ const [cartInfo,setCartInfo]=useState([])
 
             </div>
             <div className='ExerciseDetails'>
-              <Sidebar></Sidebar>
+              <Sidebar
+              cart={cart}></Sidebar>
             </div>
         </div>
     );
